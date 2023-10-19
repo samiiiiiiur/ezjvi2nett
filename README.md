@@ -1,1 +1,1 @@
-# ezjvi2nett
+# https://samz-site.com/
