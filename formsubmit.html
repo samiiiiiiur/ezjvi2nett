@@ -99,8 +99,13 @@ textarea {
   <input name="name" type="text" class="feedback-input" placeholder="Name" />   
   <input name="email" type="text" class="feedback-input" placeholder="Email" />
   <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
-  <input type="submit" value="SUBMIT"/>
+  <input onclick="redirect()" type="submit" value="SUBMIT"/>
 </form>
 </style>
+    <script>
+      var redirect = function(){
+   document.location.href="https://samz-site.com"
+}
+    </script>
   </body>
 </html>
