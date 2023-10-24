@@ -1174,40 +1174,39 @@ a:link, a:visited {
   text-align: center;
   display: inline-block;
 }
-#lightgallery{
-  display:grid;
-  grid-template-columns: repeat(5, 1fr); 
-  grid-gap:0;
-  padding:0;
-  line-height:0;
-  margin-bottom:20px
-}
-#lightgallery a{
-  display:block;
-  height:100%;
-  padding:5px;
-}
-#lightgallery img{
-  width:100%;
-  height:auto;
-}
-@media screen and (max-width: 768px) {
-
-  #links{
-      display:grid;
-      grid-template-columns: repeat(1, 1fr); 
-      grid-gap:0;
-      padding:0;
-      line-height:0;
-      margin-bottom:20px
-    }
-    #links a{
-      display:block;
-      height:100%;
-      padding:1px;
-    }
-    #links img{
-      width:100%;
-      height:98%;
-    }
+#lightgallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0;
+  padding: 0;
+  line-height: 0;
+  margin-bottom: 20px;
+ }
+ #lightgallery a {
+  display: block;
+  height: 100%;
+  padding: 5px;
+ }
+ #lightgallery img {
+  width: 100%;
+  height: auto;
+ }
+ @media screen and (max-width: 768px) {
+  #lightgallery {
+   display: grid;
+   grid-template-columns: repeat(1, 1fr);
+   grid-gap: 0;
+   padding: 0;
+   line-height: 0;
+   margin-bottom: 20px;
   }
+  #lightgallery a {
+   display: block;
+   height: 100%;
+   padding: 1px;
+  }
+  #lightgallery img {
+   width: 100%;
+   height: 98%;
+  }
+ }
