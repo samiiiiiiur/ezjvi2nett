@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>samz player</title>
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://rv2l84d4eop4.github.io/DB/assets/icon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://rv2l84d4eop4.github.io/DB/assets/icon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://rv2l84d4eop4.github.io/DB/assets/icon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://rv2l84d4eop4.github.io/DB/assets/icon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://rv2l84d4eop4.github.io/DB/assets/icon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://rv2l84d4eop4.github.io/DB/assets/icon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://rv2l84d4eop4.github.io/DB/assets/icon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://rv2l84d4eop4.github.io/DB/assets/icon/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="https://rv2l84d4eop4.github.io/DB/assets/icon/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="https://rv2l84d4eop4.github.io/DB/assets/icon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="https://rv2l84d4eop4.github.io/DB/assets/icon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://rv2l84d4eop4.github.io/DB/assets/icon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="https://rv2l84d4eop4.github.io/DB/assets/icon/favicon-128.png" sizes="128x128">
+<meta name="application-name" content="&nbsp;">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="mstile-144x144.png">
+<meta name="msapplication-square70x70logo" content="mstile-70x70.png">
+<meta name="msapplication-square150x150logo" content="mstile-150x150.png">
+<meta name="msapplication-wide310x150logo" content="mstile-310x150.png">
+<meta name="msapplication-square310x310logo" content="mstile-310x310.png">
+</head>
+<style>@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+  @font-face{
+      font-family:"pr";
+      src:url(easvhs.ttf)
+  }
+  *,*:before,*:after{
+      outline:0;
+      -webkit-box-sizing:border-box;
+      box-sizing:border-box
+  }
+  input,button{
+      outline:none
+  }
+  a,a:hover,a:visited{
+      color:#ddd;
+      text-decoration:none
+  }
+  .flex{
+      display:-webkit-flex;
+      display:flex
+  }
+  .flex-wrap{
+      display:-webkit-flex;
+      display:flex;
+      -webkit-flex-wrap:wrap;
+      flex-wrap:wrap
+  }
+  .flex-align{
+      -webkit-align-items:center;
+      align-items:center
+  }
+  .w-full{
+      width:100%
+  }
+  #samz button,#samz input,#samz img{
+      border:0;
+  }
+  #samz{
+      max-width:100%;
+      font-size:23px;
+      font-family:"pr",monospace;
+      text-align:initial;
+      line-height:initial;
+      background:#7091F5;
+      color:#27FE00;
+      margin:0 auto;
+      border-radius:10px;
+      overflow:hidden;
+  }
+  #samz .samz-album{
+      padding:20px 25px 5px
+  }
+  #samz .samz-album .samz-cover{
+      margin-right:20px
+  }
+  #samz .samz-album .samz-cover img{
+      max-width:80px;
+      width:100%;
+      margin:0;
+      padding:0;
+      display:block
+  }
+  #samz .samz-album .samz-title{
+      font-size:25px;
+      font-weight:normal;
+      color:#27FE00;
+      margin-top: 25px;;
+  }
+  #samz .samz-album .samz-artist{
+      font-size:20px;
+      color:#fff;
+  }
+  #samz .samz-controls{
+      font-size:21px;
+      padding:15px
+  }
+  #samz .samz-controls button{
+      font-size:100%;
+      width:32px;
+      height:32px;
+      background:none;
+      color:#27FE00;
+      padding:7px;
+      cursor:pointer;
+      border:0;
+      border-radius:30px
+  }
+  #samz .samz-controls button[disabled]{
+      color:#27FE00;
+      cursor:initial
+  }
+  #samz .samz-controls button:not([disabled]):hover{
+      background:none;
+      color:#27FE00
+  }
+  #samz .samz-controls .samz-prev,#samz .samz-controls .samz-next{
+      font-size:100%
+  }
+  #samz .samz-controls .samz-tracker,#samz .samz-controls .samz-volume{
+      flex:1;
+      margin-left:10px;
+      position:relative
+  }
+  #samz .samz-controls .samz-buffer{
+      position:absolute;
+      top:50%;
+      right:0;
+      left:0;
+      height:5px;
+      margin-top:-2.5px;
+      border-radius:100px
+  }
+  #samz .samz-controls .samz-loading .samz-buffer{
+      -webkit-animation:audio-progress 1s linear infinite;
+      animation:audio-progress 1s linear infinite;
+      background-image:linear-gradient(-45deg,#fefefe 25%,transparent 25%,transparent 50%,#000000 50%,#27FE00 75%,transparent 75%,transparent);
+      background-repeat:repeat-x;
+      background-size:25px 25px;
+      color:transparent
+  }
+  #samz .samz-controls .samz-time,#samz .samz-controls .samz-others{
+      margin-left:10px
+  }
+  #samz .samz-controls .samz-volume{
+      max-width:110px
+  }
+  #samz .samz-controls .samz-volume .samz-mute{
+      margin-right:5px
+  }
+  #samz .samz-controls .samz-others .samz-active{
+      background:transparent;
+  }
+  #samz .samz-controls .samz-others .samz-shide button{
+      font-size:100%;
+      padding:0;
+      width:24px;
+      height:14px;
+      display:block
+  }
+  #samz .samz-controls input[type="range"]{
+      -webkit-appearance:none;
+      background:transparent;
+      height:19px;
+      margin:0;
+      width:100%;
+      display:block;
+      position:relative;
+      z-index:2
+  }
+  #samz .samz-controls input[type="range"]::-webkit-slider-runnable-track{
+      background:rgba(183,197,205,.66);
+      height:5px;
+      border-radius:2.5px;
+      transition:box-shadow 0.3s ease;
+      position:relative
+  }
+  #samz .samz-controls input[type="range"]::-moz-range-track{
+      background:rgba(183,197,205,.66);
+      height:5px;
+      border-radius:2.5px;
+      transition:box-shadow 0.3s ease;
+      position:relative
+  }
+  #samz .samz-controls .samz-load .samz-progress::-webkit-slider-runnable-track{
+      background:#ffffff87
+  }
+  #samz .samz-controls .samz-load .samz-progress::-moz-range-track{
+      background:#fdfdfd84
+  }
+  #samz .samz-controls .samz-loading .samz-progress::-webkit-slider-runnable-track{
+      background:rgba(255,255,255,.25)
+  }
+  #samz .samz-controls .samz-loading .samz-progress::-moz-range-track{
+      background:rgba(255,255,255,.25)
+  }
+  #samz .samz-controls input[type="range"]::-webkit-slider-thumb{
+      -webkit-appearance:none;
+      background:#fff;
+      height:13px;
+      width:13px;
+      margin-top:-4px;
+      cursor:pointer;
+      border-radius:50%;
+      box-shadow:0 1px 1px rgba(0,0,0,.15),0 0 0 1px rgba(47,52,61,.2)
+  }
+  #samz .samz-controls input[type="range"]::-moz-range-thumb{
+      -webkit-appearance:none;
+      background:#fff;
+      height:13px;
+      width:13px;
+      cursor:pointer;
+      border-radius:50%;
+      box-shadow:0 1px 1px rgba(0,0,0,.15),0 0 0 1px rgba(47,52,61,.2)
+  }
+  #samz .samz-footer{
+      padding:10px 10px 12px;
+      font-size:35px;
+      text-align:center;
+      opacity:1;
+      cursor:pointer
+  }
+  .samzback{
+      text-align:center;
+      font-size:15px;
+      padding:10px 10px 12px
+  }
+  i{
+      color:#27FE00;
+  }
+  #samz .samz-display{
+      overflow:hidden;
+      max-height:650px;
+      transition:max-height 0.5s ease-in-out
+  }
+  #samz .samz-hide{
+      max-height:0
+  }
+  #samz ul{
+      margin:5px 0 0;
+      padding:0;
+      list-style:none;
+      max-height:700px
+  }
+  #samz ul li{
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      display:block;
+      margin:0;
+      padding:8px 20px;
+      cursor:pointer;
+      color:black;
+  }
+  #samz ul li:last-child{
+      padding-bottom:13px
+  }
+  #samz ul li:nth-child(odd){
+      background:#7091F5;
+  }
+  #samz ul li.samz-active{
+      color:#27FE00;
+  }
+  #samz ul li .samz-desc{
+      font-size:90%;
+      opacity:.5;
+      margin-left:5px
+  }
+  #samz ul{
+      overflow-y:auto;
+      overflow-x:hidden;
+      scrollbar-color:#73797f #2f3841
+  }
+  #samz ul::-webkit-scrollbar-track{
+      background-color:#2f3841
+  }
+  #samz ul::-webkit-scrollbar{
+      width:6px;
+      background-color:#2f3841
+  }
+  #samz ul::-webkit-scrollbar-thumb{
+      background-color:#73797f
+  }
+  @-webkit-keyframes audio-progress{
+      to{
+          background-position:25px 0
+      }
+  }
+  @keyframes audio-progress{
+      to{
+          background-position:25px 0
+      }
+  }
+  @media screen and (max-width:480px){
+      #samz .samz-controls .samz-volume,#samz .samz-controls .samz-others{
+          display:none
+      }
+      #samz .samz-controls .samz-time{
+          margin-right:10px
+      }
+      #samz ul{
+          margin:5px 0 0;
+          padding:0;
+          list-style:none;
+          max-height:400px
+      }
+      .btnz{
+          font-size:20px
+      }
+      #samz{
+          font-size:18px
+      }
+  }
+  @media screen and (max-width:370px){
+      #samz .samz-time .samz-slash,#samz .samz-time .end-time{
+          display:none
+      }
+  }
+  body{
+      background-color:#5a82f9;
+  }
+  </style>
+<body>
+<header class="intro"></header>
+<main>
+<!-- start -->
+<div class="samz-audio-player" id="samz" data-config='{"shide_top":false,"shide_btm":false,"auto_load":false}'>
+  <div class="samz-playlist">
+     <ul>
+        <li class="samz-active"><span class="samz-source" data-src="https://samz-site.com/samu/Kindlinn.mp3" data-cover="https://rv2l84d4eop4.github.io/DB/sam/cover/Kindlinn.jpg">Kindlinn</span><span class="samz-desc">Dauwd</span></li>
+        <li class="samz-source"><span class="samz-source" data-src="https://samz-site.com/samu/Music_Is_Math.mp3" data-cover="https://rv2l84d4eop4.github.io/DB/sam/cover/Music_Is_Math.jpg">Music Is Math</span><span class="samz-desc">Boards of Canada</span></li>
+        <li class="samz-source"><span class="samz-source" data-src="https://samz-site.com/samu/Roygbiv.mp3" data-cover="https://rv2l84d4eop4.github.io/DB/sam/cover/Roygbiv.jpg">Roygbiv</span><span class="samz-desc">Boards of Canada</span></li>
+        <li class="samz-source"><span class="samz-source" data-src="https://samz-site.com/samu/B4__Summer_Tape_III_.mp3" data-cover="https://rv2l84d4eop4.github.io/DB/sam/cover/B4.jpg">B4 (Summer Tape III)</span><span class="samz-desc">Binary Digit</span></li>
+        <li class="samz-source"><span class="samz-source" data-src="https://samz-site.com/samu/2046.mp3" data-cover="https://rv2l84d4eop4.github.io/DB/sam/cover/2046.jpg">恢复</span><span class="samz-desc">２８１４</span></li>
+        <li class="samz-source"><span class="samz-source" data-src="https://samz-site.com/samu/Reborn.mp3" data-cover="https://rv2l84d4eop4.github.io/DB/sam/cover/Reborn.jpg">Reborn</span><span class="samz-desc">Rhomb</span></li>
+        <li class="samz-source"><span class="samz-source" data-src="https://samz-site.com/samu/Dawn_Chorus.mp3" data-cover="https://rv2l84d4eop4.github.io/DB/sam/cover/Dawn_Chorus.jpg">Dawn Chorus</span><span class="samz-desc">Thom Yorke</span></li>
+        <li class="samz-source"><span class="samz-source" data-src="https://samz-site.com/samu/IZUS.mp3" data-cover="https://rv2l84d4eop4.github.io/DB/sam/cover/IZ-US.jpg">IZ-US</span><span class="samz-desc">Aphex Twin</span></li>
+        <li class="samz-source"><span class="samz-source" data-src="https://samz-site.com/samu/1986_Summer_Fire.mp3" data-cover="https://rv2l84d4eop4.github.io/DB/sam/cover/Smokes_Quantity_1986_Summer_Fire.jpg">Smokes Quantity / 1986 Summer Fire</span><span class="samz-desc">Boards of Canada</span></li>
+        <li class="samz-source"><span class="samz-source" data-src="https://samz-site.com/samu/Want_To_Talk_About_You.mp3" data-cover="https://rv2l84d4eop4.github.io/DB/sam/cover/I_Want_To_Talk_About_You.jpg">I Want To Talk About You</span><span class="samz-desc">Ryo Fukui</span></li>
+     </ul>
+  </div>
+<!---------------------------------------------------------------FOOTER-------------------------------------------------------------->   
+<div class="samz-footer" aria-hidden="true" >
+  <a href="https://open.spotify.com/playlist/5i7RcgcJDcFmZl5MwgFMVa?si=8bf83acc112a4968" target="_blank"><i class="fa fa-spotify" ></i></a>
+  <a href="https://youtube.com/playlist?list=PL9-F2Fr-fDgeKrTVAC6S8tP1ABs-LhiI8&si=RGE_n1XRQ_bh3AeT" target="_blank" title="index"><i class="fa fa-youtube-play" ></i></a>
+  <a href="https://t.me/+K6ttHx_LB8w3Y2E0" target="_blank"><i class="fa fa-telegram" ></i></a><br>
+  <a id="copyButton" onclick="copyText()"><i id="copyIcon" aria-hidden="true" style="cursor: pointer; font-size: 20px;">copy link</i></a><span id="copyText" style="display: none; font-size: 20px;">Link Copied</span><p id="textToCopy" style="display: none;">https://samz-site.com/samz</p>
+  <div class="samzback"><a href="https://samz-site.com" target="_blank">samz site</a></div>
+</div>
+  <!---------------------------------------------------------------FOOTER-------------------------------------------------------------->   
+</div>
+</main>     
+<!-- END  -->
+<!-- JS -->
+<script src="https://rv2l84d4eop4.github.io/DB/assets/js/player.min.js">function addEventListener_multi(a,s,e){s.split(" ").forEach((s=>a.addEventListener(s,e,!1)))}function getRandom(a,s){return a=Math.ceil(a),s=Math.floor(s),Math.floor(Math.random()*(s-a+1))+a}function getRelativePos(a){var s=a.parentNode.getBoundingClientRect(),e=a.getBoundingClientRect(),t={};return t.top=e.top-s.top+a.parentNode.scrollTop,t.right=e.right-s.right,t.bottom=e.bottom-s.bottom,t.left=e.left-s.left,t}function formatTime(a){var s,e=0,t=0;return(a=parseInt(a,10))>3600&&(a-=60*(e=parseInt(a/3600,10))*60),a>60&&(a-=60*(t=parseInt(a/60,10))),s=a,a=e>0?e+":":"",a+=t>0?(t<10&&e>0?"0":"")+t+":":"0:",a+=(s<10?"0":"")+s}function samz_initTime(){var a;(samz_controls.querySelector(".start-time").innerHTML=formatTime(samz_audio.currentTime),samz_isStream||(samz_controls.querySelector(".end-time").innerHTML=formatTime(samz_audio.duration),samz_progress.value=samz_audio.currentTime/samz_audio.duration*100),samz_audio.currentTime==samz_audio.duration)&&(samz_controls.querySelector(".samz-plause").classList.remove("fa-pause"),samz_controls.querySelector(".samz-plause").classList.add("fa-play"),samz_audio.removeEventListener("timeupdate",samz_initTime),samz_isNext?(++samz_a_index==samz_a_url.length?(samz_a_index=0,a=samz_a_url[0]):a=samz_a_url[samz_a_index],samz_changeAudio(a),samz_setAlbum(samz_a_index)):samz_isPlaying=!1)}function samz_initAudio(){samz_isLoaded=4==samz_audio.readyState,samz_isStream="Infinity"==samz_audio.duration,samz_controls.querySelector(".samz-plause").disabled=!1,samz_progress.disabled=!!samz_isStream,samz_isStream||(samz_progress.parentNode.classList.remove("samz-load","samz-loading"),samz_controls.querySelector(".end-time").innerHTML=formatTime(samz_audio.duration)),samz_audio.addEventListener("timeupdate",samz_initTime),samz_isLoaded&&samz_isPlaying&&samz_audio.play(),addEventListener_multi(samz_progress,"touchstart mousedown",(function(a){if(samz_isStream)return a.stopPropagation(),!1;4==samz_audio.readyState&&(samz_audio.removeEventListener("timeupdate",samz_initTime),samz_audio.pause())})),addEventListener_multi(samz_progress,"touchend mouseup",(function(a){if(samz_isStream)return a.stopPropagation(),!1;4==samz_audio.readyState&&(samz_audio.currentTime=samz_progress.value*samz_audio.duration/100,samz_audio.addEventListener("timeupdate",samz_initTime),samz_isPlaying&&samz_audio.play())}))}function samz_loadAudio(a){samz_progress.parentNode.classList.add("samz-loading"),samz_controls.querySelector(".samz-plause").disabled=!0,samz_audio.querySelector("source").src=a.dataset.src,samz_audio.load(),samz_audio.volume=parseFloat(samz_v_num/100),samz_audio.addEventListener("canplaythrough",samz_initAudio),samz_audio.addEventListener("error",(function(){alert("Please reload the page.")}))}function samz_setAlbum(a){samz_cover.innerHTML=samz_a_url[a].dataset.cover?'<div style="background:url('+samz_a_url[a].dataset.cover+') no-repeat;background-size:cover;width:100px;height:100px;"></div>':'<i class="fa fa-music fa-5x"></i>',samz_title.innerHTML=samz_source[a].querySelector(".samz-source").innerHTML,samz_artist.innerHTML=samz_source[a].querySelector(".samz-desc")?samz_source[a].querySelector(".samz-desc").innerHTML:""}function samz_changeAudio(a){samz_isLoaded=!1,samz_controls.querySelector(".samz-prev").disabled=0==samz_a_index,samz_controls.querySelector(".samz-plause").disabled=!!samz_auto_load,samz_controls.querySelector(".samz-next").disabled=samz_a_index==samz_a_url.length-1,samz_progress.parentNode.classList.add("samz-load"),samz_progress.disabled=!0,samz_progress.value=0,samz_controls.querySelector(".start-time").innerHTML="00:00",samz_controls.querySelector(".end-time").innerHTML="00:00",a=samz_isRandom&&samz_isNext?samz_a_url[getRandom(0,samz_a_url.length-1)]:a;for(var s=0;s<samz_a_url.length;s++)samz_a_url[s].parentNode.classList.remove("samz-active"),samz_a_url[s]==a&&(samz_a_index=s,samz_a_url[s].parentNode.classList.add("samz-active"));var e=getRelativePos(samz_source[samz_a_index]);samz_source[samz_a_index].parentNode.scrollTop=e.top,(samz_auto_load||samz_isPlaying)&&samz_loadAudio(a),samz_isPlaying&&(samz_controls.querySelector(".samz-plause").classList.remove("fa-play"),samz_controls.querySelector(".samz-plause").classList.add("fa-pause"))}function samz_startScript(){ap_samz=document.querySelector("#samz"),samz_audio=ap_samz.querySelector("#audio"),samz_album=ap_samz.querySelector(".samz-album"),samz_cover=samz_album.querySelector(".samz-cover"),samz_title=samz_album.querySelector(".samz-title"),samz_artist=samz_album.querySelector(".samz-artist"),samz_controls=ap_samz.querySelector(".samz-controls"),samz_progress=samz_controls.querySelector(".samz-progress"),samz_volume=samz_controls.querySelector(".samz-volume"),samz_v_slider=samz_volume.querySelector(".samz-v-slider"),samz_v_num=samz_v_slider.value,samz_others=samz_controls.querySelector(".samz-others"),samz_auto_load=samz_config.auto_load,samz_config.shide_top&&samz_album.parentNode.classList.toggle("samz-hide"),samz_config.shide_btm&&(samz_playlist.classList.add("samz-display"),samz_playlist.classList.toggle("samz-hide")),samz_a_url.length<=1&&(samz_controls.querySelector(".samz-prev").style.display="none",samz_controls.querySelector(".samz-next").style.display="none",samz_others.querySelector(".samz-plext").style.display="none",samz_others.querySelector(".samz-random").style.display="none"),samz_source.forEach((function(a,s){a.classList.contains("samz-active")&&(samz_a_index=s),a.addEventListener("click",(function(){samz_audio.removeEventListener("timeupdate",samz_initTime),samz_a_index=s,samz_changeAudio(this.querySelector(".samz-source")),samz_setAlbum(samz_a_index)}))})),samz_changeAudio(samz_a_url[samz_a_index]),samz_setAlbum(samz_a_index),samz_controls.querySelector(".samz-plauseward").addEventListener("click",(function(a){var s=a.target.classList;s.contains("samz-plause")?samz_audio.paused?(samz_isLoaded||samz_loadAudio(samz_a_url[samz_a_index]),samz_audio.play(),samz_isPlaying=!0,s.remove("fa-play"),s.add("fa-pause")):(samz_audio.pause(),samz_isPlaying=!1,s.remove("fa-pause"),s.add("fa-play")):(s.contains("samz-prev")&&0!=samz_a_index?(samz_a_index-=1,a.target.disabled=0==samz_a_index):s.contains("samz-next")&&samz_a_index!=samz_a_url.length-1&&(samz_a_index+=1,a.target.disabled=samz_a_index==samz_a_url.length-1),samz_audio.removeEventListener("timeupdate",samz_initTime),samz_changeAudio(samz_a_url[samz_a_index]),samz_setAlbum(samz_a_index))})),samz_volume.addEventListener("click",(function(a){var s=a.target.classList;s.contains("samz-mute")?s.contains("fa-volume-up")?(s.remove("fa-volume-up"),s.add("fa-volume-off"),samz_v_slider.value=0):(s.remove("fa-volume-off"),s.add("fa-volume-up"),samz_v_slider.value=samz_v_num):0!=(samz_v_num=samz_v_slider.value)&&(samz_controls.querySelector(".samz-mute").classList.remove("fa-volume-off"),samz_controls.querySelector(".samz-mute").classList.add("fa-volume-up")),samz_audio.volume=parseFloat(samz_v_slider.value/100)})),samz_others.addEventListener("click",(function(a){var s=a.target.classList;s.contains("samz-plext")?(samz_isNext=!(samz_isNext&&!samz_isRandom),samz_isRandom||(samz_isRanext=!samz_isRanext),s.contains("samz-active")&&!samz_isRandom?s.remove("samz-active"):s.add("samz-active")):s.contains("samz-random")?(samz_isRandom=!samz_isRandom,samz_isNext&&!samz_isRanext?(samz_isNext=!1,samz_others.querySelector(".samz-plext").classList.remove("samz-active")):(samz_isNext=!0,samz_others.querySelector(".samz-plext").classList.add("samz-active")),s.contains("samz-active")?s.remove("samz-active"):s.add("samz-active")):s.contains("samz-shide-top")?samz_album.parentNode.classList.toggle("samz-hide"):s.contains("samz-shide-bottom")&&(samz_playlist.classList.add("samz-display"),samz_playlist.classList.toggle("samz-hide"))}))}if(document.querySelector("#samz")){var samz_auto_load,samz_audio,samz_album,samz_cover,samz_title,samz_artist,samz_controls,samz_progress,samz_volume,samz_v_slider,samz_v_num,samz_others,samz_buttonz,ap_samz=document.querySelector("#samz"),samz_playlist=ap_samz.querySelector(".samz-playlist"),samz_source=samz_playlist.querySelectorAll("li"),samz_a_url=samz_playlist.querySelectorAll("[data-src]"),samz_a_index=0,samz_isPlaying=!1,samz_isNext=!0,samz_isRandom=!1,samz_isRanext=!1,samz_isStream=!1,samz_isLoaded=!1,samz_config=ap_samz.dataset.config?JSON.parse(ap_samz.dataset.config):{shide_top:!1,shide_btm:!1,auto_load:!1},samz_elem="";samz_elem+='<audio id="audio" preload><source src="" type="audio/mpeg"></audio>',samz_elem+='<div class="samz-display"><div class="samz-album w-full flex-wrap"><div class="samz-cover"><i class="fa fa-music fa-5x"></i></div><div class="samz-info"><div class="samz-title">Title</div><div class="samz-artist">Artist</div></div></div></div>',samz_elem+='<div class="samz-controls flex-wrap flex-align">',samz_elem+='<div class="samz-plauseward flex flex-align"><button type="button" class="samz-prev fa fa-backward" disabled></button><button type="button" class="samz-plause fa fa-play" disabled></button><button type="button" class="samz-next fa fa-forward" disabled></button></div>',samz_elem+='<div class="samz-tracker samz-load"><input class="samz-progress" type="range" min="0" max="100" value="0" disabled/><div class="samz-buffer"></div></div>',samz_elem+='<div class="samz-time flex flex-align"><span class="start-time">00:00</span><span class="samz-slash">&#160;/&#160;</span><span class="end-time">00:00</span></div>',samz_elem+='<div class="samz-volume flex flex-align"><button type="button" class="samz-mute fa fa-volume-up"></button><input class="samz-v-slider" type="range" min="0" max="100" value="100"/></div>',samz_elem+='<div class="samz-others flex flex-align"><button type="button" class="samz-random fa fa-random" title="Random"></button><div class="samz-shide"><button type="button" class="samz-shide-top fa fa-caret-up" title="Show/Hide Album"></button><button type="button" class="samz-shide-bottom fa fa-caret-down" title="Show/Hide Playlist"></button></div></div>',samz_elem+="</div>";var samz_player=document.createElement("div");samz_player.classList.add("samz-player"),samz_player.innerHTML=samz_elem,ap_samz.insertBefore(samz_player,samz_playlist),samz_startScript()}</script>
+<!--FOOTER-->
+<script>function copyText(){var e=document.getElementById("textToCopy").innerText,t=document.createElement("input");t.value=e,document.body.appendChild(t),t.select(),document.execCommand("copy"),document.body.removeChild(t);var n=document.getElementById("copyIcon");n.style.display="none";var o=document.getElementById("copyText");o.style.display="inline",setTimeout(function(){n.style.display="inline",o.style.display="none"},1e3)}</script>
+</body>
+</html>
+<!--
+  ____    _    __  __ _____  ____ ___ _____ _____                                    
+ / ___|  / \  |  \/  |__  / / ___|_ _|_   _| ____|                                   
+ \___ \ / _ \ | |\/| | / /  \___ \| |  | | |  _|                                     
+  ___) / ___ \| |  | |/ /_   ___) | |  | | | |___                                    
+ |____/_/   \_\_|  |_/____| |____/___| |_| |_____|                                                                                                                   
+   ____    _    __  __ _____  ____  _        _ __   _______ ____  
+  / ___|  / \  |  \/  |__  / |  _ \| |      / \\ \ / / ____|  _ \ 
+  \___ \ / _ \ | |\/| | / /  | |_) | |     / _ \\ V /|  _| | |_) |
+   ___) / ___ \| |  | |/ /_  |  __/| |___ / ___ \| | | |___|  _ < 
+  |____/_/   \_\_|  |_/____| |_|   |_____/_/   \_\_| |_____|_| \_\
+-->
+
+
