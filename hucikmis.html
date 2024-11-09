@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Material</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            margin-bottom: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .grade {
+            background-color: #ffffff;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .semester {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        .course-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px 0;
+        }
+        .course-link {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            text-align: center;
+            display: inline-block;
+        }
+        .course-link:hover {
+            background-color: #0056b3;
+        }
+        .course-link .course-name {
+            display: block;
+            font-size: 0.8em;
+            color: #dcdcdc;
+            margin-top: 5px;
+        }
+        @media (max-width: 768px) {
+            .course-list {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Course Material</h1>
+
+        <div class="grade">
+            <h2>1st Grade</h2>
+            <div class="semester">
+                <h3>1st Semester</h3>
+                <div class="course-list">
+                    <a href="#" class="course-link">Course 101<span class="course-name">Introduction to Math</span></a>
+                    <a href="#" class="course-link">Course 102<span class="course-name">Basic Science</span></a>
+                    <a href="#" class="course-link">Course 103<span class="course-name">English Fundamentals</span></a>
+                </div>
+            </div>
+            <div class="semester">
+                <h3>2nd Semester</h3>
+                <div class="course-list">
+                    <a href="#" class="course-link">Course 104<span class="course-name">History Basics</span></a>
+                    <a href="#" class="course-link">Course 105<span class="course-name">Environmental Science</span></a>
+                    <a href="#" class="course-link">Course 106<span class="course-name">Creative Writing</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="grade">
+            <h2>2nd Grade</h2>
+            <div class="semester">
+                <h3>3rd Semester</h3>
+                <div class="course-list">
+                    <a href="#" class="course-link">Course 201<span class="course-name">Intermediate Math</span></a>
+                    <a href="#" class="course-link">Course 202<span class="course-name">Physics Basics</span></a>
+                    <a href="#" class="course-link">Course 203<span class="course-name">Literature Studies</span></a>
+                </div>
+            </div>
+            <div class="semester">
+                <h3>4th Semester</h3>
+                <div class="course-list">
+                    <a href="#" class="course-link">Course 204<span class="course-name">World History</span></a>
+                    <a href="#" class="course-link">Course 205<span class="course-name">Biology Essentials</span></a>
+                    <a href="#" class="course-link">Course 206<span class="course-name">Advanced Writing</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="grade">
+            <h2>3rd Grade</h2>
+            <div class="semester">
+                <h3>5th Semester</h3>
+                <div class="course-list">
+                    <a href="#" class="course-link">Course 301<span class="course-name">Algebra Concepts</span></a>
+                    <a href="#" class="course-link">Course 302<span class="course-name">Chemistry Introduction</span></a>
+                    <a href="#" class="course-link">Course 303<span class="course-name">Modern Literature</span></a>
+                </div>
+            </div>
+            <div class="semester">
+                <h3>6th Semester</h3>
+                <div class="course-list">
+                    <a href="#" class="course-link">Course 304<span class="course-name">Geography Basics</span></a>
+                    <a href="#" class="course-link">Course 305<span class="course-name">Health Science</span></a>
+                    <a href="#" class="course-link">Course 306<span class="course-name">Creative Arts</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="grade">
+            <h2>4th Grade</h2>
+            <div class="semester">
+                <h3>7th Semester</h3>
+                <div class="course-list">
+                    <a href="#" class="course-link">Course 401<span class="course-name">Calculus I</span></a>
+                    <a href="#" class="course-link">Course 402<span class="course-name">Physics II</span></a>
+                    <a href="#" class="course-link">Course 403<span class="course-name">Classic Literature</span></a>
+                </div>
+            </div>
+            <div class="semester">
+                <h3>8th Semester</h3>
+                <div class="course-list">
+                    <a href="#" class="course-link">Course 404<span class="course-name">American History</span></a>
+                    <a href="#" class="course-link">Course 405<span class="course-name">Advanced Biology</span></a>
+                    <a href="#" class="course-link">Course 406<span class="course-name">Public Speaking</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
