@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found</title>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Google Sans', sans-serif;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .logo-container {
+      margin-bottom: 30px;
+    }
+
+    .logo {
+      max-width: 150px;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 100px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    p {
+      font-size: 18px;
+      color: #777;
+      margin-bottom: 30px;
+    }
+
+    a.back-home {
+      font-size: 16px;
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a.back-home:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 80px;
+      }
+      .container {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo-container">
+      <img src="https://upload.wikimedia.org/wikipedia/tr/2/28/Hacettepe_%C3%9Cniversitesi_Logosu.svg" alt="Logo" class="logo">
+    </div>
+    <p>Oops! The page you're looking for doesn't exist.</p>
+    <a href="./home.html" class="back-home">Go back to Homepage</a>
+  </div>
+
+  <script>
+    //if(location.pathname.endsWith(".html")){const a=location.pathname.slice(0,-5);location.replace(a)}
+  </script>
+</body>
+</html>
+
+

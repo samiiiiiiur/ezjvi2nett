@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Google Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+.logo-text {
+    margin-top: 10px;
+    font-size: 1.7em;
+    font-weight: 500;
+    color: #333;
+}
+
+.menu {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.menu li {
+    margin: 15px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #0D92F4;
+}
+
+@media (min-width: 768px) {
+    .menu {
+        display: flex;
+        gap: 30px;
+    }
+
+    .menu li {
+        margin: 0;
+    }
+}
+
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/tr/2/28/Hacettepe_%C3%9Cniversitesi_Logosu.svg" alt="Hacettepe Logo">
+            <p class="logo-text">Makine Mühendisliği Kaynaklari</p>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="" target="_self">Home</a></li>
+                <li><a href="./recources.html">recources</a></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScPGYyp5Xxqf9H59dtQUixs6dmsRDRDl20pUX4Gaamvo6S7NA/viewform">Upload</a></li>
+                <li><a href="#hmech">H-mech</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

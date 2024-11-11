@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Material</title>
+    <!-- Google Sans Font Import -->
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400&display=swap" rel="stylesheet">
+</head>
+    
+    <style>
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            margin-bottom: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .grade {
+            background-color: #ffffff;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .semester {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        .course-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px 0;
+        }
+        .course-link {
+            padding: 10px 15px;
+            background-color:#0D92F4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            text-align: center;
+            display: inline-block;
+        }
+        .course-link:hover {
+            background-color: #ED1E24;
+        }
+        .course-link .course-name {
+            display: block;
+            font-size: 0.8em;
+            color: #dcdcdc;
+            margin-top: 5px;
+        }
+        @media (max-width: 768px) {
+            .course-list {
+                flex-direction: column;
+            }
+        }
+/*------------------------------------------------------------------------------------*/
+header {
+    text-align: center;
+}
+.menu {
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li {
+    margin: 15px 15px ;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #0073e6;
+}
+@media (max-width: 768px) {
+            .menu {
+                font-size: 0.8em;
+            }
+        }
+</style>
+</head>
+<body>
+<!-----------------------------------------nav start------------------------------------------>
+<header>
+    <div class="logo">
+    </div>
+    <nav>
+        <ul class="menu">
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./recources.html">recources</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScPGYyp5Xxqf9H59dtQUixs6dmsRDRDl20pUX4Gaamvo6S7NA/viewform">Upload</a></li>
+            <li><a href="#hmech">H-mech</a></li>
+        </ul>
+    </nav>
+</header>
+<!-----------------------------------------navbar------------------------------------------>
+<div class="container">
+<!-----------------------------------------1st Semester------------------------------------------>
+<div class="grade">
+    <h2>BİRİNCİ SINIF</h2>
+        <div class="semester">
+            <h3>1. YARIYIL</h3>
+                <div class="course-list">
+                    <a href="https://samz-site.com/404" class="course-link">MAT 123<span class="course-name">Matematik I</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">FIZ 137<span class="course-name">Fizik I</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">KIM127<span class="course-name">Temel Kimya I</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">KIM121<span class="course-name">Genel Kimya Laboratuvarı I</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MÜH 101<span class="course-name">Programlamaya Giriş</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MÜH 103<span class="course-name">İş Sağlığı ve Güvenliği I</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">ING 111<span class="course-name">Dil Becerileri I</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">TKD 103<span class="course-name">Türk Dili I </span></a>
+                </div>
+            </div>
+<!---------------------------------------2nd Semester-------------------------------------------->
+        <div class="semester">
+            <h3>2. YARIYIL</h3>
+                <div class="course-list">
+                    <a href="https://samz-site.com/404" class="course-link">MAT 124<span class="course-name">Matematik II</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">FIZ 138<span class="course-name">Fizik II</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">FIZ 117<span class="course-name">Fizik Laboratuvarı</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 116<span class="course-name">Teknik Çizim </span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 104<span class="course-name">Makina Müh. Giriş</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MÜH 104<span class="course-name">İş Sağlığı ve Güvenliği II</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">ING 112<span class="course-name">Dil Becerileri II</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">TKD 104<span class="course-name">Türk Dili II </span></a>
+                </div>
+            </div>
+        </div>
+<!---------------------------------------3rd Semester-------------------------------------------->
+        <div class="grade">
+            <h2>İKİNCİ SINIF</h2>
+            <div class="semester">
+                <h3>3. YARIYIL</h3>
+                <div class="course-list">
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 203<span class="course-name">Statik</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 205<span class="course-name">Termodinamik I</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 209<span class="course-name">Malzeme Bilimi</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">ELE 296<span class="course-name">Elektronik Devreler ve Sistemlere Giriş</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MAT 235<span class="course-name">Mühendislik Matematiği I</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">AIT 203<span class="course-name">Atatürk İlk. ve İnk. Tar. I</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 200<span class="course-name">Atölye Eğitimi</span></a>
+                </div>                    
+            </div>
+<!---------------------------------------4th Semester-------------------------------------------->
+            <div class="semester">
+                <h3>4. YARIYIL</h3>
+                <div class="course-list">
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 202<span class="course-name">Sayısal Çözümleme </span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 204<span class="course-name">Dinamik</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 214<span class="course-name">Üretim Mühendisliği</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 218<span class="course-name">Müh. İçin Uyg. Matematik  </span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 208<span class="course-name">Mukavemet</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">AİT 204<span class="course-name">Atatürk İlk. ve İnk. Tar. II</span></a>
+                </div>
+            </div>
+        </div>
+<!------------------------------------------5th Semester----------------------------------------->
+        <div class="grade">
+            <h2>ÜÇÜNCÜ SINIF</h2>
+            <div class="semester">
+                <h3>5. YARIYIL</h3>
+                <div class="course-list">
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 303<span class="course-name">Akışkanlar Mekaniği I</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 317<span class="course-name">Makina Elemanları Tasarımı</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 313<span class="course-name">Makina Teorisi</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 319<span class="course-name">Sistem Dinamiği ve Kontrol</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 301<span class="course-name"> Staj I</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">İNG 211<span class="course-name">Akademik Yazma Becerileri I </span></a>
+
+                </div>
+            </div>
+<!------------------------------------------6th Semester----------------------------------------->            
+            <div class="semester">
+                <h3>6. YARIYIL</h3>
+                <div class="course-list">
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 306<span class="course-name">Isı Transferi</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 308<span class="course-name">Makina Elemanları Tasarımı II</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 370<span class="course-name">Mühendislik Ölçümleri</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 340<span class="course-name">Mekanik Titreşimler</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 311<span class="course-name">Termodinamik II </span></a>
+                    <a href="https://samz-site.com/404" class="course-link">ING 212<span class="course-name">Akademik Yazma Becerileri II </span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 318<span class="course-name">Mekanik Tasarım</span></a>
+
+                </div>
+            </div>
+        </div>
+<!----------------------------------------7th Semester------------------------------------------->
+        <div class="grade">
+            <h2>DÖRDÜNCÜ SINIF</h2>
+            <div class="semester">
+                <h3>7. YARIYIL</h3>
+                <div class="course-list">
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 411<span class="course-name">Isıl Mühendislik ve Tasarım</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 497<span class="course-name">Tasarım Projesi I </span></a>
+                    <a href="https://samz-site.com/404" class="course-link">EMÜ 365<span class="course-name">Mühendislik Ekonomisi</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 400<span class="course-name">Staj II</span></a>
+                </div>
+            </div>
+<!------------------------------------8th Semester----------------------------------------------->            
+            <div class="semester">
+                <h3>8. YARIYIL</h3>
+                <div class="course-list">
+                    <a href="https://samz-site.com/404" class="course-link">MMÜ 498<span class="course-name"> Tasarım Projesi II</span></a>
+                    <a href="https://samz-site.com/404" class="course-link">EMÜ 464<span class="course-name">Proje Yönetimi </span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-------------------------------------div end---------------------------------------------->    
+</body>
+</html>
