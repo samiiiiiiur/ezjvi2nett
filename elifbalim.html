@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>resources</title>
+
+<style>
+:root{
+  --turquoise:#14b8b1;
+  --dark:#111111;
+  --muted:#6b6b6b;
+  --light:#ffffff;
+  --bg:#f7f9f9;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--dark);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Navigation */
+
+nav{
+  position:sticky;
+  top:0;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid #eee;
+  z-index:100;
+}
+
+.nav-container{
+  max-width:1100px;
+  margin:auto;
+  padding:18px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-weight:600;
+  font-size:18px;
+}
+
+.menu{
+  display:flex;
+  gap:25px;
+}
+
+.menu a{
+  text-decoration:none;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.menu a:hover{
+  color:var(--turquoise);
+}
+
+.menu-toggle{
+  display:none;
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* Hero */
+
+header{
+  max-width:1100px;
+  margin:auto;
+  padding:100px 20px 80px 20px;
+}
+
+header h1{
+  font-size:42px;
+  font-weight:500;
+  letter-spacing:-1px;
+  margin-bottom:20px;
+}
+
+header p{
+  max-width:520px;
+  color:var(--muted);
+}
+
+/* Sections */
+
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+.section-title{
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  color:var(--turquoise);
+  margin-bottom:30px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:var(--light);
+  padding:18px 20px;
+  border-radius:12px;
+  border:1px solid #eee;
+  transition:0.2s ease;
+}
+
+.card:hover{
+  border-color:var(--turquoise);
+  transform:translateY(-4px);
+}
+
+.card a{
+  text-decoration:none;
+  color:var(--dark);
+  font-size:15px;
+}
+
+.card a:hover{
+  color:var(--turquoise);
+}
+
+/* Footer */
+
+footer{
+  text-align:center;
+  padding:50px 20px;
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+  header{
+    padding:80px 20px 60px 20px;
+  }
+
+  header h1{
+    font-size:32px;
+  }
+
+  .menu{
+    position:absolute;
+    top:60px;
+    right:20px;
+    background:white;
+    flex-direction:column;
+    padding:20px;
+    border-radius:12px;
+    border:1px solid #eee;
+    display:none;
+  }
+
+  .menu.show{
+    display:flex;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <div class="logo">:D</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="menu" id="menu">
+      <a href="#contemporary">Contemporary</a>
+      <a href="#traditional">Traditional</a>
+      <a href="#gardens">Gardens</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <h1>Iranian Architecture</h1>
+  <p>A collection of contemporary works and historic landmarks across Iran.</p>
+  <p><b>It’s still very incomplete for now, but this is the starting list. I’ll try to update it soon and add more resources for you.</b></p>
+</header>
+
+<section id="contemporary">
+  <div class="section-title">Contemporary</div>
+  <div class="grid">
+    <div class="card"><a href="https://caoi.ir/en/projects/item/1998-do-bar-house-tehran-ama-studio.html" target="_blank">Do Bar House — AMA Studio</a></div>
+    <div class="card"><a href="https://caoi.ir/en/projects/item/1931-goosheh-residential-building-narmak-ardisa-architecture-studio.html" target="_blank">Goosheh Residential — Ardisa</a></div>
+    <div class="card"><a href="https://caoi.ir/en/projects/item/1903-pomme-garden-firouzbahram-tehran-maryam-salami.html" target="_blank">Pomme Garden — Maryam Salami</a></div>
+    <div class="card"><a href="https://en.wikipedia.org/wiki/Argo_Factory" target="_blank">Argo Factory</a></div>
+    <div class="card"><a href="https://www.reddit.com/r/amazing_architecture/comments/okj7rc/brick_house_in_golestan_iran_designed_by_ivan" target="_blank">Brick House — Ivan</a></div>
+    <div class="card"><a href="https://www.reddit.com/r/ArchitecturePortfolio/comments/1oda0gc/termeh_building_in_hamedan_iran_by_ahmad_bathaei" target="_blank">Termeh Building — Ahmad Bathaei</a></div>
+  </div>
+</section>
+
+<section id="traditional">
+  <div class="section-title">Traditional Houses</div>
+  <div class="grid">
+    <div class="card"><a href="https://en.wikipedia.org/wiki/Borujerdi_House" target="_blank">Borujerdi House</a></div>
+    <div class="card"><a href="https://en.wikipedia.org/wiki/Abb%C4%81si_House" target="_blank">Abbasi House</a></div>
+    <div class="card"><a href="https://en.wikipedia.org/wiki/Tabatabai_House" target="_blank">Tabatabai House</a></div>
+    <div class="card"><a href="https://www.reddit.com/r/ArchitecturalRevival/comments/1g49mmu/traditional_architecture_of_kashan_iran" target="_blank">Traditional Architecture of Kashan</a></div>
+  </div>
+</section>
+
+<section id="gardens">
+  <div class="section-title">Gardens & Monuments</div>
+  <div class="grid">
+    <div class="card"><a href="https://en.wikipedia.org/wiki/Fin_Garden" target="_blank">Fin Garden</a></div>
+    <div class="card"><a href="https://en.wikipedia.org/wiki/Afif-Abad_Garden" target="_blank">Afif-Abad Garden</a></div>
+    <div class="card"><a href="https://www.atlasobscura.com/places/nasir-al-mulk-mosque" target="_blank">Nasir al-Mulk Mosque</a></div>
+    <div class="card"><a href="https://en.wikipedia.org/wiki/Shams-ol-Emareh" target="_blank">Shams-ol-Emareh</a></div>
+    <div class="card"><a href="https://en.wikipedia.org/wiki/Gonbad-e_Qabus_%28tower%29" target="_blank">Gonbad-e Qabus</a></div>
+    <div class="card"><a href="https://www.reddit.com/r/ArchitecturePorn/comments/149c9bh/ceiling_inside_the_bazaar_of_kashan_kashan_iran" target="_blank">Kashan Bazaar Ceiling</a></div>
+  </div>
+</section>
+
+<footer>
+  no rights reserved lmao
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
