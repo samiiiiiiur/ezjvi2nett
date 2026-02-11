@@ -9,9 +9,9 @@
 :root{
   --turquoise:#14b8b1;
   --dark:#111111;
-  --muted:#6b6b6b;
-  --light:#ffffff;
-  --bg:#f7f9f9;
+  --muted:#111111;
+  --light:#dddddd;
+  --bg:#D9CFC7;
 }
 
 *{
@@ -33,9 +33,9 @@ body{
 nav{
   position:sticky;
   top:0;
-  background:rgba(255,255,255,0.95);
+  background:#D9CFC7;
   backdrop-filter:blur(8px);
-  border-bottom:1px solid #eee;
+  border-bottom:1px solid#D9CFC7;
   z-index:100;
 }
 
@@ -139,6 +139,31 @@ section{
   color:var(--turquoise);
 }
 
+.card{
+  display:block;
+  background:var(--light);
+  padding:18px 20px;
+  border-radius:12px;
+  border:1px solid #eee;
+  text-decoration:none;   /* removes underline */
+  color:var(--dark);      /* keeps text color */
+  transition:0.2s ease;
+}
+
+.card:visited{
+  color:var(--dark);      /* prevents purple visited links */
+}
+
+.card:hover{
+  border-color:var(--turquoise);
+  transform:translateY(-4px);
+  color:var(--dark);      /* prevents color change */
+}
+
+.card:active{
+  color:var(--dark);
+}
+
 /* Footer */
 
 footer{
@@ -205,36 +230,38 @@ footer{
 <section id="contemporary">
   <div class="section-title">Contemporary</div>
   <div class="grid">
-    <div class="card"><a href="https://caoi.ir/en/projects/item/1998-do-bar-house-tehran-ama-studio.html" target="_blank">Do Bar House — AMA Studio</a></div>
-    <div class="card"><a href="https://caoi.ir/en/projects/item/1931-goosheh-residential-building-narmak-ardisa-architecture-studio.html" target="_blank">Goosheh Residential — Ardisa</a></div>
-    <div class="card"><a href="https://caoi.ir/en/projects/item/1903-pomme-garden-firouzbahram-tehran-maryam-salami.html" target="_blank">Pomme Garden — Maryam Salami</a></div>
-    <div class="card"><a href="https://en.wikipedia.org/wiki/Argo_Factory" target="_blank">Argo Factory</a></div>
-    <div class="card"><a href="https://www.reddit.com/r/amazing_architecture/comments/okj7rc/brick_house_in_golestan_iran_designed_by_ivan" target="_blank">Brick House — Ivan</a></div>
-    <div class="card"><a href="https://www.reddit.com/r/ArchitecturePortfolio/comments/1oda0gc/termeh_building_in_hamedan_iran_by_ahmad_bathaei" target="_blank">Termeh Building — Ahmad Bathaei</a></div>
+    <a class="card" href="https://caoi.ir/en/projects/item/1998-do-bar-house-tehran-ama-studio.html" target="_blank">Do Bar House — AMA Studio</a>
+    <a class="card" href="https://caoi.ir/en/projects/item/1931-goosheh-residential-building-narmak-ardisa-architecture-studio.html" target="_blank">Goosheh Residential — Ardisa</a>
+    <a class="card" href="https://caoi.ir/en/projects/item/1903-pomme-garden-firouzbahram-tehran-maryam-salami.html" target="_blank">Pomme Garden — Maryam Salami</a>
+    <a class="card" href="https://en.wikipedia.org/wiki/Argo_Factory" target="_blank">Argo Factory</a>
+    <a class="card" href="https://www.reddit.com/r/amazing_architecture/comments/okj7rc/brick_house_in_golestan_iran_designed_by_ivan" target="_blank">Brick House — Ivan</a>
+    <a class="card" href="https://www.reddit.com/r/ArchitecturePortfolio/comments/1oda0gc/termeh_building_in_hamedan_iran_by_ahmad_bathaei" target="_blank">Termeh Building — Ahmad Bathaei</a>
   </div>
 </section>
 
 <section id="traditional">
   <div class="section-title">Traditional Houses</div>
   <div class="grid">
-    <div class="card"><a href="https://en.wikipedia.org/wiki/Borujerdi_House" target="_blank">Borujerdi House</a></div>
-    <div class="card"><a href="https://en.wikipedia.org/wiki/Abb%C4%81si_House" target="_blank">Abbasi House</a></div>
-    <div class="card"><a href="https://en.wikipedia.org/wiki/Tabatabai_House" target="_blank">Tabatabai House</a></div>
-    <div class="card"><a href="https://www.reddit.com/r/ArchitecturalRevival/comments/1g49mmu/traditional_architecture_of_kashan_iran" target="_blank">Traditional Architecture of Kashan</a></div>
+    <a class="card" href="https://en.wikipedia.org/wiki/Borujerdi_House" target="_blank">Borujerdi House</a>
+    <a class="card" href="https://en.wikipedia.org/wiki/Abb%C4%81si_House" target="_blank">Abbasi House</a>
+    <a class="card" href="https://en.wikipedia.org/wiki/Tabatabai_House" target="_blank">Tabatabai House</a>
+    <a class="card" href="https://www.reddit.com/r/ArchitecturalRevival/comments/1g49mmu/traditional_architecture_of_kashan_iran" target="_blank">Traditional Architecture of Kashan</a>
+    <a class="card" href="https://hiddenarchitecture.net/bazaar-of-kashan/" target="_blank">bazaar of Kashan</a>
   </div>
 </section>
 
 <section id="gardens">
   <div class="section-title">Gardens & Monuments</div>
   <div class="grid">
-    <div class="card"><a href="https://en.wikipedia.org/wiki/Fin_Garden" target="_blank">Fin Garden</a></div>
-    <div class="card"><a href="https://en.wikipedia.org/wiki/Afif-Abad_Garden" target="_blank">Afif-Abad Garden</a></div>
-    <div class="card"><a href="https://www.atlasobscura.com/places/nasir-al-mulk-mosque" target="_blank">Nasir al-Mulk Mosque</a></div>
-    <div class="card"><a href="https://en.wikipedia.org/wiki/Shams-ol-Emareh" target="_blank">Shams-ol-Emareh</a></div>
-    <div class="card"><a href="https://en.wikipedia.org/wiki/Gonbad-e_Qabus_%28tower%29" target="_blank">Gonbad-e Qabus</a></div>
-    <div class="card"><a href="https://www.reddit.com/r/ArchitecturePorn/comments/149c9bh/ceiling_inside_the_bazaar_of_kashan_kashan_iran" target="_blank">Kashan Bazaar Ceiling</a></div>
+    <a class="card" href="https://en.wikipedia.org/wiki/Fin_Garden" target="_blank">Fin Garden</a>
+    <a class="card" href="https://en.wikipedia.org/wiki/Afif-Abad_Garden" target="_blank">Afif-Abad Garden</a>
+    <a class="card" href="https://www.atlasobscura.com/places/nasir-al-mulk-mosque" target="_blank">Nasir al-Mulk Mosque</a>
+    <a class="card" href="https://en.wikipedia.org/wiki/Shams-ol-Emareh" target="_blank">Shams-ol-Emareh</a>
+    <a class="card" href="https://en.wikipedia.org/wiki/Gonbad-e_Qabus_%28tower%29" target="_blank">Gonbad-e Qabus</a>
+    <a class="card" href="https://www.reddit.com/r/ArchitecturePorn/comments/149c9bh/ceiling_inside_the_bazaar_of_kashan_kashan_iran" target="_blank">Kashan Bazaar Ceiling</a>
   </div>
 </section>
+
 
 <footer>
   no rights reserved lmao
